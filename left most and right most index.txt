@@ -1,0 +1,18 @@
+import java.io.*;
+import java.util.*;
+public class Main {
+
+    public static void main(String[] args) {
+       Scanner s=new Scanner(System.in);
+        int a=s.nextInt();
+        int ar[]=new int[a];
+        for(int i=0;i<a;ar[i]=s.nextInt(),i++);
+        int b=s.nextInt();
+        int c=-1,l=-1;
+        for(int i=0,j=a-1;i<a;j--,i++){
+            if(ar[i]==b && c==-1) c=i;
+            if(ar[j]==b && l==-1) l=j;
+        }
+        System.out.println(c+" "+l);
+    }
+}
